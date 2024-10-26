@@ -15,7 +15,11 @@
             <form action="form_action.php" method="get">
                     <div class="form-group">
                             <label>Marks (0-100)</label>
-                            <input type="number" required name="marks"  class="form-control"/>
+                            <input type="number"  name="marks"  class="form-control"/>
+                            <p style="color:red"><?php if(isset($_GET['error'])) { echo $_GET['error']; }?></p>
+
+                            <span style="color:green"><?php if(isset($_GET['grade'])) { echo $_GET['grade']; }?></span>
+                            <!-- <input type="number" required name="sec-marks"  class="form-control"/> -->
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
             </form>
